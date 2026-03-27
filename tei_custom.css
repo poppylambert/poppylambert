@@ -1,0 +1,100 @@
+@namespace url("http://www.tei-c.org/ns/1.0");
+@namespace ns url(""); 
+
+/* This stylesheet is just a starting point for styling TEI/XML files. 
+ * It includes selectors for some basic TEI elements, and some ugly styling for them.
+ * To adapt it for your own encoding:
+ * 		1. add selectors for the elements you are actually using
+ * 		2. delete the selectors for elements you aren't actually using
+ * 		3. modify the styles so that the text looks the way you want 
+ * 		4. to tell your TEI files where to find this stylesheet, paste this code 
+ * 			into each TEI file (it should be the second line):
+ * 			<?xml-stylesheet type="text/css" href="html.css"?>
+ * */
+
+/* To include styles for custom elements you have created:
+ * 		1. add the URL for your namespace on line 2 above
+ * 		2. add the name of your new element instead of "element_name" on line 22
+ * 		3. add whatever styling you want for the element
+ * 		4. copy line 22 if needed to add styles for additional new elements
+ *  */
+
+ns|element_name {color:green;}
+
+
+teiHeader{
+	display:none;
+}
+
+text {
+	font-family:arial, helvetica, sans-serif;
+	color: black;
+}
+
+opener > name {
+	margin-left: 3em;
+	display:block;	
+}
+
+p {margin-left: 3em; 
+	margin-top: 1em; 
+	display: block; 
+}
+
+closer {margin-left: 3em; 
+	margin-top: 1em; 
+}
+persName {color:red;}
+
+placeName {color:green;}
+ 
+
+salute {display:block;
+	font-style:italic;}
+
+signed {font-family:fantasy;}
+
+pb:before {
+	content: "[page " attr(n) "]";
+	color:blue;
+	display:block;
+	margin-top:2em;
+	margin-bottom:2em;
+	margin-left: 2em;
+}
+
+lb {
+	display: block;
+}
+
+add:before {
+	content: "["
+}
+
+add {
+	color: red;
+	display:inline;
+}
+
+p > add {
+	color:lime;
+}
+
+add:after {
+	content: "]"
+}
+
+
+list[type="numbered"] > item {
+	display:block;
+}
+
+list[type="numbered"] > item:before { 
+	content: attr(n) ". "; 
+	}
+	
+	
+	
+	
+	
+	

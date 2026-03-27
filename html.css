@@ -1,0 +1,16 @@
+body {background-color:white; 
+		margin:3em;
+
+}
+
+p {display:block;}
+
+h1 {display:block;
+	font-weight:bold;
+	font-size:large;
+	}
+	
+p.navigation {
+	display:block;
+	font-weight:bold;
+}
